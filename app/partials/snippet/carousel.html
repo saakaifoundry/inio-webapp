@@ -1,0 +1,16 @@
+<div class="carousel">
+	<div class="carousel-wrap">
+		<ul>
+			<li ng-repeat="item in items">
+				<div class="img">
+					<a ng-href="#/detail/{{item.id}}"><img ng-src="{{item.thumbnail}}" alt="" /></a>
+				</div>
+				<div class="title"><a ng-href="#/detail/{{item.id}}">{{item.title}}</a></div>
+			</li>
+		</ul>
+	</div>
+	<div class="bullets">
+		<span ng-click="moveToPage(0)" class="active"></span>
+		<span ng-click="moveToPage(1)"></span>
+	</div>
+</div>

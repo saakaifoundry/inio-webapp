@@ -1,0 +1,59 @@
+<div class="detail{{playback == 1 ? ' detail-playback' : ''}}">
+	<div class="img">
+		<img ng-src="{{item.coverImg}}" alt="" />
+	</div>
+
+	<div class="meta">
+		<h1>{{item.title}}</h1>
+
+		<div class="cast">
+			<div class="row">
+				<span class="label">Directors:</span>
+				<span class="text">{{item.directors.join(', ')}}</span>
+			</div>
+			<div class="row">
+				<span class="label">Actors:</span>
+				<span class="text">{{item.actors.join(', ')}}</span>
+			</div>
+		</div>
+
+		<div class="tags">
+			<span>{{item.year}}</span>
+			<span class="country">{{item.countries.join(', ')}}</span>
+			<!--<span>134 min</span>-->
+		</div>
+
+		<div class="stars stars-4">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<!--
+		<div class="audio">
+			ENG, GER
+		</div>
+
+		<div class="subtitles">
+			ENG, GER, JPN
+		</div>
+
+		<div class="labels">
+			<span class="hd"></span>
+			<span class="plus18"></span>
+		</div>
+		-->
+
+		<div class="buttons">
+			<button class="btn-trailer" router-go="/playback/{{item.id}}">TRAILER</button>
+			<button class="btn-play" router-go="/playback/{{item.id}}">PLAY</button>
+			<button class="btn-love"><span></span></button>
+		</div>
+	</div>
+
+	<div class="description">
+		<p>{{item.description}}</p>
+	</div>
+</div>

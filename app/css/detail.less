@@ -1,0 +1,178 @@
+.detail {
+	overflow: hidden;
+	margin-bottom: 60px;
+
+	.img {
+		width: 220px;
+		float: left;
+
+		img {
+			width: 175px;
+		}
+	}
+
+	.meta {
+		margin-left: 220px;
+
+		h1 {
+			font-size: 260%;
+			font-weight: normal;
+			margin: 0 0 20px 0;
+			text-transform: uppercase;
+		}
+
+		.cast {
+			float: right;
+			width: 410px;
+			font-size: 130%;
+
+			.row {
+				margin: 0 0 10px 0;
+
+				.label {
+					float: left;
+					width: 140px;
+					color: #a6a6a6;
+				}
+
+				.text {
+					display: block;
+					margin: 0 0 0 140px;
+				}
+			}
+		}
+
+		.stars {
+			margin: 10px 0;
+
+			span {
+				display: inline-block;
+				width: 26px;
+				height: 26px;
+				margin-right: 3px;
+				background: url('../img/icon-star-full.png') no-repeat center center;
+	 		}
+		}
+
+		.stars-4 {
+			span:nth-child(5n){
+				background-image: url('../img/icon-star-empty.png');
+			}
+		}
+
+		.tags {
+			span {
+				display: inline-block;
+				border-right: 1px solid #ddd;
+				padding: 0 10px 0 0;
+				margin: 0 10px 0 0;
+				font-weight: bold;
+				color: @colorHighlight;
+			}
+			span:last-child {
+				border: none;
+			}
+
+			span.country {
+				text-transform: uppercase;
+			}
+		}
+
+		.audio {
+			height: 26px;
+			line-height: 27px;
+			padding: 0 0 0 37px;
+			margin: 0 0 10px 0;
+			background: url('../img/icon-audio.png') no-repeat left center;
+		}
+
+		.subtitles {
+			height: 26px;
+			line-height: 27px;
+			padding: 0 0 0 37px;
+			margin: 0 0 10px 0;
+			background: url('../img/icon-subtitles.png') no-repeat left center;
+		}
+
+		.labels {
+			float: right;
+
+			span {
+				display: inline-block;
+				width: 30px;
+				height: 18px;
+				background: no-repeat center center;
+			}
+
+			span.hd {
+				background-image: url('../img/icon-hd-small.png');
+			}
+
+			span.plus18 {
+				background-image: url('../img/icon-18+-small.png');
+			}
+		}
+
+		.buttons {
+			margin: 30px 0 0 0;
+
+			.btn-love {
+				padding: 0 12px;
+				white-space: nowrap;
+				line-height: 40px;
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+					height: 22px;
+					width: 25px;
+					background: url('../img/icon-heart-small.png') no-repeat center center;
+				}
+			}
+		}
+	}
+
+	.description {
+		clear: left;
+		padding: 40px 0 0 0;
+
+		p {
+			margin: 0;
+			padding: 0;
+			font-size: 150%;
+			line-height: 170%;
+		}
+	}
+}
+
+.detail-playback {
+	display: none;
+}
+
+div[open="open"] {
+	.detail-playback {
+		display: block;
+		margin-bottom: 30px;
+		
+		.img {
+			width: 180px;
+
+			img {
+				width: 140px;
+			}
+		}
+
+		.meta {
+			margin-left: 180px;
+		}
+
+		.description {
+			padding: 20px 0 0 0;
+
+			p {
+				font-size: 130%;
+				line-height: 150%;
+			}
+		}
+	}
+}

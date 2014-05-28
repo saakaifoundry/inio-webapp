@@ -1,0 +1,23 @@
+<div class="catalog{{sidebar == 1 ? ' catalog-sidebar' : ''}}{{tvshows == 1 ? ' catalog-tvshows' : ''}}">
+	<div class="sidebar" ng-if="sidebar == 1">
+		<ul class="menu" ng-repeat="genre in genres">
+			<!--<li class="section{{genre.active ? ' active' : ''}}"><a href="#/{{genre.href}}"><span class="arrow" ng-if="genre.active == true"></span>{{genre.title}}</a></li>-->
+			<li class="section{{genre.active ? ' active' : ''}}"><span class="arrow" ng-if="genre.active == true"></span>{{genre.title}}</li>
+			<li ng-repeat="subgenre in genre.items" class="{{subgenre.active ? 'active' : ''}}"><a href="#/{{genre.href}}/{{subgenre.id}}"><span class="arrow" ng-if="subgenre.active == true"></span>{{subgenre.title}}</a></li>
+		</ul>
+	</div>
+
+	<ul class="movies">
+		<li ng-repeat="item in items" class="{{item.isEpisode ? 'landscape' : ''}}">
+			<div class="img">
+				<a ng-href="#/{{item.controller ? item.controller : 'detail'}}/{{item.id}}"><img ng-src="{{item.coverImg}}" alt="" /></a>
+			</div>
+			<div class="meta">
+				<a ng-href="#/{{item.controller ? item.controller : 'detail'}}/{{item.id}}">
+					<div ng-if="!tvshows"><span class="year">{{item.year}}</span>, <span class="country">{{item.countries.join(', ')}}</span></div>
+					<span class="title">{{item.title}}</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>

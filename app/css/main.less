@@ -1,0 +1,76 @@
+@colorBg: #f5f5f5;
+@colorText: #595959;
+@colorTextTitle: #999999;
+@colorHighlight: #cb4627;
+@pageWidth: 950px;
+@headerHeight: 112px;
+@colorHeader: #d7d7d7;
+@colorButton: #666666;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 13px;
+	background-color: @colorBg;
+	color: @colorText;
+}
+
+a {
+	text-decoration: none;
+	color: @colorText;
+}
+
+a:hover {
+	color: @colorHighlight;
+}
+
+#content {
+	min-height: 400px;
+	padding: 60px 0;
+
+	.wrap {
+		width: @pageWidth;
+		margin: 0 auto;
+	}
+}
+
+h2 {
+	height: 0.5em;
+	line-height: 100%;
+	font-size: 130%;
+	border-bottom: 1px solid #dadada;
+	overflow: visible;
+	text-align: center;
+	font-weight: normal;
+	color: @colorTextTitle;
+	margin: 0 0 40px 0;
+
+	span {
+		background: @colorBg;
+		padding: 0 40px;
+	}
+}
+
+button {
+	border: none;
+	background: @colorButton;
+	padding: 10px 12px;
+	margin: 0;
+	font-size: 130%;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	vertical-align: top;
+}
+button:hover {
+	background-color: @colorHighlight;
+}
+
+@import 'header.less';
+@import 'footer.less';
+@import 'carousel.less';
+@import 'catalog.less';
+@import 'sidebar.less';
+@import 'detail.less';
+@import 'playback.less';

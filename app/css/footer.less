@@ -1,0 +1,87 @@
+@colorFooter: #161616;
+
+footer {
+	background: @colorFooter;
+	border-top: 4px solid @colorFooter;
+	margin: 40px 0 0 0;
+
+	.wrap {
+		position: relative;
+		width: @pageWidth;
+		margin: 0 auto;
+	}
+
+	.footer-menu {
+		height: @headerHeight;
+		background: #292929 url('../img/header-lights.png') no-repeat top center;
+
+		.menu {
+			position: absolute;
+			top: 45px;
+			right: 0;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					margin-left: 30px;
+					text-transform: uppercase;
+					font-size: 130%;
+
+					a {
+						color: @colorHeader;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom {
+		overflow: hidden;
+		padding: 20px 0;
+
+		.backlink {
+			float: right;
+			line-height: 40px;
+
+			a {
+				color: #a7a7a7;
+			}
+		}
+
+		.mautilus {
+			float: left;
+			width: 136px;
+			height: 40px;
+			background: url('../img/logo-mautilus.png') no-repeat center center;
+		}
+
+		.social {
+			float: left;
+
+			span {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				margin-left: 20px;
+				background: transparent no-repeat center center;
+			}
+
+			span.twitter {
+				background-image: url('../img/social-twitter.png');
+			}
+
+			span.facebook {
+				background-image: url('../img/social-facebook.png');
+			}
+		}
+
+		.copyright {
+			text-align: center;
+			line-height: 40px;
+		}
+	}
+}

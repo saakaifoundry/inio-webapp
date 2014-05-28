@@ -1,0 +1,47 @@
+@sidebarColorActive: #18ccc6;
+
+.sidebar {
+	width: 215px;
+	float: left;
+
+	ul.menu {
+		margin: 0 0 30px 0;
+		padding: 0 0 0 16px;
+		list-style: none;
+
+		li {
+			margin: 0;
+			font-size: 130%;
+			line-height: 180%;
+			text-transform: uppercase;
+
+			a {
+				display: block;
+			}
+
+			.arrow {
+				display: inline-block;
+				line-height: 0;
+				font-size: 0;
+				vertical-align: middle;
+				margin: -2px 0 0 -16px;
+				border: 8px solid @sidebarColorActive;
+				border-top-color: transparent;
+				border-bottom-color: transparent;
+				border-right-color: transparent;
+			}
+		}
+
+		li.section {
+			font-weight: bold;
+			font-size: 150%;
+		}
+
+		li.active {
+			font-weight: bold;
+			a {
+				color: @sidebarColorActive;
+			}
+		}
+	}
+}

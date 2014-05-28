@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>INIO.TV</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+</head>
+<body ng-controller="AppController">
+  <ng-include src="layoutPartial('header')"></ng-include>
+
+  <div id="content" ng-view></div>
+
+  <ng-include src="layoutPartial('footer')"></ng-include>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!-- Content -->
+  <script src="inio/promise.js"></script>
+  <script src="inio/deferrable.js"></script>
+  <script src="content/content.js"></script>
+  <script src="content/component.js"></script>
+  <script src="content/parser.js"></script>
+  <script src="content/model.js"></script>
+  <script src="content/model/filter.js"></script>
+  <script src="content/model/video.js"></script>
+  <script src="content/component/wrapper.js"></script>
+  <script src="content/component/configuration.js"></script>
+  <script src="content/component/filter.js"></script>
+  <script src="content/component/brightcove.js"></script>
+  <script src="content/component/brightcove/filter.js"></script>
+  <script src="content/component/brightcove/playlist.js"></script>
+  <script src="content/component/brightcove/video.js"></script>
+  <script src="content/component/brightcove/search.js"></script>
+
+  <script src="inio.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controller/home.js"></script>
+  <script src="js/controller/catalog.js"></script>
+  <script src="js/controller/detail.js"></script>
+  <script src="js/controller/playback.js"></script>
+  <script src="js/controller/tvshows.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directive/routergo.js"></script>
+  <script src="js/directive/carousel.js"></script>
+  <script src="js/directive/catalog.js"></script>
+  <script src="js/directive/menu.js"></script>
+</body>
+</html>
